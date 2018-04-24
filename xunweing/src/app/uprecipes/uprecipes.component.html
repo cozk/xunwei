@@ -1,0 +1,82 @@
+<div class="_body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-10 col-md-push-1">
+        <br>
+        <br>
+        <h3>欢迎发布新菜谱，先介绍一下你的大作！</h3>
+        <br>
+        <br>
+
+        <form class="form-horizontal" #uprecipesForm="ngForm" id="upload_form">
+          <div class="coll">
+            <div class="form-group">
+              <br>
+              <br>
+              <label for="title" class="col-sm-2 control-label">标题</label>
+              <div class="col-sm-4">
+                <input type="email"  name="biaoti" class="form-control" id="title" maxlength="10" placeholder="请填写作品名称，10个字之内">
+              </div>
+              <label  class="col-sm-2 control-label">菜系</label>
+              <div class="col-sm-2">
+                <select class="form-control" #nick="ngModel" [(ngModel)]="caixi" id="caixi" name="caixi">
+                  <option value="0">家常</option>
+                  <option value="1">中华</option>
+                  <option value="2">外国</option>
+                  <option value="3">烘焙</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="upload_file0" class="col-sm-2 control-label">成品图</label>
+              <div class="col-sm-2">
+                <input type="file" class="form-control" id="upload_file0" accept="image/*" name="user_icon0">
+                <div id="preview0">点击上传</div>
+              </div>
+              <div class="col-sm-4 col-sm-push-2">
+                <textarea class="form-control"  name="gushi" id="gushi" rows="12" placeholder="说说这道菜背后的故事吧~~"></textarea>
+              </div>
+            </div>
+          </div>
+          <br>
+          <h3>开始写步骤了！能否简单易学就看你怎么写了，加油！</h3>
+          <br>
+          <br>
+          <div class="coll">
+            <br>
+            <br>
+            <div class="form-group">
+              <div class="form-group" *ngFor="let wo of buz; let i =index">
+                <label class="col-sm-2 control-label">步骤{{i+1}}:</label>
+                <div class="col-sm-2">
+                  <input type="file" class="form-control" id="upload_file{{i+1}}" accept="image/*" name="user_icon{{i+1}}">
+                  <div id="preview{{i+1}}">点击上传</div>
+                </div>
+                <div class="col-sm-6" style="padding-left: 70px">
+                  <textarea class="form-control" rows="7" id="buzou{{i+1}}" name="buzou{{i+1}}"  placeholder="请描述具体步骤（70字之内）" rows="5"  maxlength="50" onchange="this.value=this.value.substring(0, 70)" onkeydown="this.value=this.value.substring(0, 70)" onkeyup="this.value=this.value.substring(0, 70)" ></textarea>
+                </div>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2">
+                <input type="button" class="add" (click)="toadd()" value="增加一步">&nbsp;&nbsp;<span *ngIf="mo">最多上传六步！！！</span>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2">
+                <input type="button" class="del" (click)="todel()" value="减少一步">&nbsp;&nbsp;<span *ngIf="le">再点就没有步骤啦！！！</span>
+              </div>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-6">
+              <input type="button" class="btn_sub" (click)="touprecipes(uprecipesForm)" value="确认提交"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

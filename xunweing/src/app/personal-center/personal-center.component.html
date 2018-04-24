@@ -1,0 +1,46 @@
+<div class="_body">
+<div class="container">
+  <div class="row" >
+    <div class="col-md-10 col-lg-10 col-md-push-1">
+      <br>
+      <br>
+      <h3>欢迎来到我的美食空间</h3>
+      <br>
+      <br>
+      <div class="myheader">
+          <div class="usericon">
+            <img src="http://127.0.0.1:3000/uploads/personal/{{icon}}" alt="" >
+          </div>
+          <div class="usermain" >
+            <div class="username">
+              <div class="p1">{{name}}</div>
+              <div class="p2">{{datetime}}加入寻味  |    <a (click)="toedit()" class="edits">编辑个人资料</a></div>
+            </div>
+            <div class="useremail">
+              <!--<a href="#" class="myemail">我的私信</a>-->
+            </div>
+          </div>
+          <div class="userinfo">
+            <div class="li1"><a [routerLink]="['guanzhu']"  class="ups"><span>关注</span></a></div>
+            <div class="li2"><a [routerLink]="['fensi']" class="ups"><span>粉丝</span></a></div>
+            <div class="li3"><a (click)="touprecipes()" class="ups"><span>发布作品</span></a></div>
+            <div class="li4"><a ><span>欢迎登入</span> </a></div>
+          </div>
+      </div>
+
+    <nav class="_nav">
+          <a routerLink="./works" routerLinkActive="active" class="_work" >作品</a>
+          <a routerLink="./comment" routerLinkActive="active" class="_comment" >评论</a>
+          <a routerLink="./collections" routerLinkActive="active" class="_comment" >菜谱收藏</a>
+          <a routerLink="./guanzhu" routerLinkActive="active" class="_comment" >关注</a>
+          <a routerLink="./fensi" routerLinkActive="active" class="_comment" >粉丝</a>
+      </nav>
+
+      <div>
+        <router-outlet>
+        </router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

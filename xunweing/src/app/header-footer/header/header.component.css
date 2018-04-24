@@ -1,0 +1,119 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*=====================================================总导航*/
+.mynav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(29,29,29);
+  font-size: 15px;
+}
+
+/*=====================================================导航左部logo*/
+.mynav-logo {
+  width: 12%;
+  float: left;
+}
+
+.myheader-logo {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 15px;
+  position: relative;
+}
+
+/*=====================================================导航中间list*/
+.mynav-list {
+  width: 68%;
+  float: left;
+}
+
+.mynav-list {
+  float: left;
+  line-height: 80px;
+  padding-left: 70px;
+}
+
+.mynav-list span {
+  display: inline-block;
+  height: 80px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.mynav-list span a {
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mynav-list span a:hover {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #00b38a;
+}
+
+/*========================================================导航右边login*/
+.mynav-login {
+  width: 20%;
+  float: left;
+  height: 80px;
+}
+
+.myradius-login {
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /*border: 1px solid #00b38a;*/
+  /*border-radius: 20px;*/
+  /*background-color: #00b38a;*/
+  color: #FFF;
+  box-sizing: border-box;
+}
+.myradius-login:hover{
+  color: #00b38a;
+  font-weight: bolder;
+}
+.myradius-regist {
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  border:none;
+  outline: none;
+  background-color: transparent;
+  /*border: 1px solid #00b38a;*/
+  /*border-radius: 20px;*/
+  /*background-color: #00b38a;*/
+  color: #FFF;
+  box-sizing: border-box;
+}
+.myradius-regist:hover{
+  color: #00b38a;
+  font-weight: bolder;
+}
+
+.myradius-welcome {
+  /*width: 50px;*/
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /*border: 1px solid #00b38a;*/
+  /*border-radius: 20px;*/
+  /*background-color: #00b38a;*/
+  color: #FFF;
+  box-sizing: border-box;
+}

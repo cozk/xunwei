@@ -1,0 +1,22 @@
+.forumsearch{
+  background-color:rgba(29,29,29,0.5);
+  height: 73px;
+  line-height: 73px;
+  border: 0px solid rgb(29,29,29) ;
+  border-radius: 5px;
+}
+
+ .forumsearch a{
+   font-size: 18px;
+   padding: 8px 13px 8px 13px;
+   border: 0px solid black;
+   border-radius: 7px;
+   margin-left: 5px;
+   margin-top: 20px;
+   text-decoration: none;
+   color:white;
+   cursor: pointer;
+ }
+ .forumsearch a:hover{
+   background-color: rgba(192,192,192,0.6);
+ }

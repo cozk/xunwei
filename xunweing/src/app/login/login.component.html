@@ -1,0 +1,52 @@
+<div>
+  <div class="video-wrap ">
+    <img src="../../assets/images/bg.jpg"/>
+  </div>
+  <div class="main">
+  <img src="../../assets/images/logo/logotop.png" height="74" width="92"/>
+      <form #loginForm="ngForm">
+        <ul>
+          <li>
+            <i class="glyphicon glyphicon-user"></i>
+            <input (click)="clicktel()" type="text" #tel="ngModel" [(ngModel)]="_telephone" pattern="^1[34578]\d{9}$" id="telephone" name="telephone" placeholder="请输入手机号码" required>
+          </li>
+          <li>
+            <p class="left" id="tel"></p>
+            <div *ngIf="tel.invalid && (tel.dirty || tel.touched)" >
+              <div class="left" *ngIf="tel.errors.required">
+                <i class="glyphicon glyphicon-remove"></i> 号码不能为空
+              </div>
+              <div class="left" *ngIf="tel.errors.pattern">
+                <i class="glyphicon glyphicon-remove"></i>号码格式不正确
+              </div>
+            </div>
+          </li>
+          <li>
+            <i class="glyphicon glyphicon-pencil"></i>
+            <input (click)="clickpass()" type="password" #pass="ngModel" [(ngModel)]="_password"  minlength="7" id="password" name="password" placeholder="请输入密码" required>
+          </li>
+          <li>
+            <p class="left" id="pass"></p>
+            <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" >
+              <div class="left" *ngIf="pass.errors.required">
+                <i class="glyphicon glyphicon-remove"></i>密码不能为空
+              </div>
+              <div class="left" *ngIf="pass.errors.minlength">
+                <i class="glyphicon glyphicon-remove"></i>密码大于六位
+              </div>
+            </div>
+          </li>
+          <li>
+            <button type="button" (click)="toLogin(loginForm)"  [disabled]="loginForm.form.invalid"  class="login  btn btn-success">登录</button>
+          </li>
+          <li>
+
+          </li>
+          <li>
+            <a routerLink="/register" routerLinkActive="active">还没有账号？免费注册</a>
+          </li>
+        </ul>
+      </form>
+  </div>
+</div>
+

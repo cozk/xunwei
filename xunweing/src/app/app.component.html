@@ -1,0 +1,13 @@
+<div *ngIf="nav">
+  <app-header></app-header>
+</div>
+<div>
+  <router-outlet #outlet></router-outlet>
+</div>
+<div id="gotop" (click)="backTop()"></div>
+
+<div class="clear">
+  <div *ngIf="nav">
+    <app-footer></app-footer>
+  </div>
+</div>

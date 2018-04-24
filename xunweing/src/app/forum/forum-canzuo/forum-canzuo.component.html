@@ -1,0 +1,101 @@
+
+<div style="background-color: rgb(251,251,251); padding-bottom: 82px;background-image: url(./../../../assets/images/forumbody.jpg);background-attachment: fixed">
+
+
+  <div class="container">
+    <div class="row" style="text-align: center;">
+      <h3 style="padding-top: 34px;padding-bottom:25px;color: white">有人的地方才有力量</h3>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <app-forum-search></app-forum-search>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1" style="margin-left: -15px;">
+
+
+        <div class="left">
+
+          <div class="pic" style="background-image: url(./../../../assets/images/forum/canzuo.jpg)">
+            <div class="sp1">小组介绍</div>
+            <div class="sp2">爱你就是和你吃很多顿饭，分享你的餐桌故事。</div>
+          </div>
+          <br><br>
+
+
+          <div class="post">
+            <div id="topic">
+              <p class="tuijian">|&nbsp;&nbsp;餐桌时光</p>
+            </div>
+            <ul>
+
+              <li class="card"  *ngFor="let fs of _forumbody | queren3">
+                <div class="look">
+                <span class="lookspan">
+                  <p>{{fs?.liulan}}</p>
+                  <p>浏览</p>
+                </span>
+                </div>
+                <div class="detail">
+                  <p class="detailp1" (click)="forumdetail(fs.title)">{{fs?.title}}</p>
+                  <p class="detailp2">{{fs?.detail |jiequ}}</p>
+                  <p class="detailp3">发帖人：{{fs?.userid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发帖时间：{{fs?.posttime}}</p>
+                </div>
+              </li>
+
+
+              <li class="card"  *ngFor="let fc of _forumcai">
+                <div class="look">
+                <span class="lookspan">
+                  <p>{{fc?.renqi}}</p>
+                  <p>浏览</p>
+                </span>
+                </div>
+                <div class="detail">
+                  <p class="detailp1" (click)="forumdetailcai(fc.biaoti)">{{fc?.biaoti}}</p>
+                  <p class="detailp2">{{fc?.gushi |jiequ}}</p>
+                  <p class="detailp3">发帖人：{{fc?.author}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发帖时间：{{fc?.cooktime}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+
+
+        <div class="right" style="margin-right: -25px;">
+          <div style="background-image: url(./../../../assets/images/right1.png);width: 245px;height: 405px;"></div>
+          <div class="publish"><a href="">发布菜谱</a></div><br>
+          <p style="color:orangered;font-size: 18px;margin-left: 18px;">官方活动</p>
+          <ul>
+
+            <li class="authority" *ngFor="let fs of _forumbody|queren1">
+              <div class="gfimg"></div>
+              <div class="gfwords" (click)="forumdetail(fs.title)">
+                <a>{{fs?.title |gfjiequ}}</a>
+                <br>
+                <span style="display: inline-block;font-size: 8px;">{{fs?.posttime}}</span>
+              </div>
+            </li>
+
+          </ul>
+
+          <div style="background-image: url(./../../../assets/images/right2.jpg);width: 245px;height: 156px; float: left;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>

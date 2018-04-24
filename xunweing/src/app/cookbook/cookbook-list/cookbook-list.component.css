@@ -1,0 +1,225 @@
+
+
+
+/*搜索栏*/
+.search_nav{
+  position: absolute;
+  top:400px;
+  left: 27%;
+  max-width: 70%;
+
+}
+.search_btn{
+  background: #00b38a ;
+  border: 0;
+
+}
+.search_btn:hover{
+  background: #00cd9d;
+}
+.col-md-6{
+  padding-right:0 ;
+}
+
+
+
+.bg_nav{
+  width: 100%;
+  height: 500px;
+  /*padding: 0;*/
+  overflow: hidden;
+  position: relative;
+}
+.bg_nav img{
+  width: 100%;
+}
+/*大家都在搜*/
+
+.space_right {
+  /*width: 300px;*/
+  float: right;
+  overflow: hidden;
+  min-height: 460px;
+  /*position:fixed;*/
+}
+.space_rightB{
+  position: fixed;
+  top:10px;
+}
+.mo {
+  font-size: 20px;
+  color: #ff6767;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 20px 0 20px 25px;
+  background: rgba(0,0,0,0) url(http://static.meishichina.com/v6/img/mo.png) no-repeat scroll left center;
+}
+.mt10 {
+  margin-top: 10px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.s_right li {
+  font-size: 16px;
+  padding: 0 0 10px;
+  display: block;
+  height: 40px;
+  margin-left: 10px;
+}
+.s_right li a{
+  cursor: pointer;
+  color: #333;
+}
+.s_right li a:hover{
+  color: #ff6767;
+}
+li{
+  margin: 0;
+  padding: 0;
+
+}
+.clear:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+
+/*左边*/
+.space_left {
+  overflow: hidden;
+  min-height: 400px;
+}
+/*标题*/
+.arinfo {
+  padding: 10px 0;
+  line-height: 22px;
+}
+.ui_title {
+  height: 35px;
+  border-bottom: 1px solid #E8E8E8;
+  position: relative;
+}
+.ui_title_wrap {
+  line-height: 30px;
+  font-size: 20px;
+}
+.ui_title_wrap a.on {
+
+  color: #ff6767;
+
+}
+.ui_title_wrap a.out{
+  color: black;
+}
+.ui_title_wrap .right {
+  float: right;
+  margin: 0 0 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ui_title_wrap a {
+  text-decoration: none;
+}
+.ui_list_1 li {
+  padding: 10px 0;
+  overflow: hidden;
+  vertical-align: top;
+  zoom: 1;
+  display: block;
+}
+.ui_list_1 .pic {
+  float: left;
+  width: 120px;
+  height: auto;
+}
+.ui_list_1 .detail {
+  color: #999;
+  padding-left: 135px;
+}
+.ui_list_1 h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ui_list_1 .substatus .left a {
+  color: #999;
+  margin-right: 10px;
+  zoom: 1;
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+}
+.ui_list_1 .substatus {
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  padding-top: 1px;
+}
+.ui_list_1 .subcontent, .ui_list_1 h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ui_list_1 .subcontent {
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  color: #666;
+}
+
+a.thumbnail:hover {
+  border-color:#ddd;
+}
+a:hover{
+  text-decoration: none;
+}
+.title{
+  display: inline-block;
+  margin-top: 10px;
+}
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+

@@ -1,0 +1,33 @@
+.btn{
+  color: white;
+  background: grey;
+  margin-top: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  font-family: inherit;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.com{
+  background-color: rgb(250,250,250);
+  margin-top: -20px;
+  opacity: 0.9;
+}
+ul{
+  list-style: none;
+}
+.li{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px dashed black ;
+}

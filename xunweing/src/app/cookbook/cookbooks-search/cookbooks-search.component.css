@@ -1,0 +1,22 @@
+/*搜索栏*/
+
+.search_nav{
+  position: absolute;
+  top:400px;
+  left: 27%;
+  max-width: 70%;
+
+}
+.search_btn{
+  background: #00b38a ;
+  border: 0;
+
+}
+.search_btn:hover{
+  background: #00cd9d;
+}
+.col-md-6{
+  padding-right:0 ;
+}
+
+

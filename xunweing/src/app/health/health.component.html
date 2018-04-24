@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <img src="./../../assets/images/health/01.jpg" alt="">
+    <div class="word">
+      <p>10月，晚秋时节润燥滋阴</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4" id="myScrollspy">
+      <ul class="nav nav-tabs nav-stacked" id="myNav">
+        <li class=""><a href="#section-1">饮食小常识</a></li>
+        <li class=""><a href="#section-2">饮食禁忌</a></li>
+        <li class=""><a href="#section-3">食品安全</a></li>
+        <li class=""><a href="#section-4">美食典故</a></li>
+        <li class=""><a href="#section-5">茶文化</a></li>
+      </ul>
+    </div>
+    <div class="health-info col-xs-8">
+      <h2 id="section-1">帮助你了解更多的饮食小常识</h2>
+      <ul>
+        <!--<li><a href="">办公室常备3种健康饮食</a></li>-->
+        <!--<li><a href="">3个步骤做出美味鱼香肉丝</a></li>-->
+        <!--<li><a href="">6种酱油怎么吃更营养</a></li>-->
+        <!--<li><a href="">为何有的鱼刺多有的少？</a></li>-->
+        <!--<li><a href="">干煸牛肉的3种做法</a></li>-->
+        <!--<li><a href="">吃鸡蛋可降低中风风险</a></li>-->
+        <!--<li><a href="">烟民清肺吃什么？</a></li>-->
+        <!--<li><a href="">秋天嘴唇干燥怎么办</a></li>-->
+        <ng-container *ngFor="let healthcommon of _health | healthCommon">
+          <li><a (click)="toHealthDetail(healthcommon?.healthtitle)">{{healthcommon?.healthtitle}}</a></li>
+        </ng-container>
+      </ul>
+      <hr>
+      <h2 id="section-2">生活中需要知道的那些饮食间的禁忌</h2>
+      <ul>
+        <!--<li><a href="">四个喝豆浆误区不能犯</a></li>-->
+        <!--<li><a href="">盘点导致失眠的9大食物</a></li>-->
+        <!--<li><a href="">汤泡饭危害大揭秘</a></li>-->
+        <!--<li><a href="">吃的太饱“撑”出10种病</a></li>-->
+        <!--<li><a href="">鸡蛋6种最错误吃法会伤身</a></li>-->
+        <!--<li><a href="">帮你解读食物自己发出的警告</a></li>-->
+        <!--<li><a href="">6种食物让你远离便秘</a></li>-->
+        <!--<li><a href="">胃酸过多吃什么好？</a></li>-->
+        <ng-container *ngFor="let healthtaboo of _health | healthTaboo">
+          <li><a (click)="toHealthDetail(healthtaboo?.healthtitle)">{{healthtaboo?.healthtitle}}</a></li>
+        </ng-container>
+      </ul>
+      <hr>
+      <h2 id="section-3">警惕生活中那些不容忽视的食品安全问题</h2>
+      <ul>
+        <!--<li><a href="">深秋十月饮食5原则</a></li>-->
+        <!--<li><a href="">保温杯泡茶易致癌？</a></li>-->
+        <!--<li><a href="">冻鱼保鲜保营养嘛？</a></li>-->
+        <!--<li><a href="">凉拌或油炸四季豆易中毒</a></li>-->
+        <!--<li><a href="">橘子吃多易变“小黄人”</a></li>-->
+        <!--<li><a href="">事物掉地上5秒内捡起还能吃？</a></li>-->
+        <!--<li><a href="">腌制食品有毒说法不科学</a></li>-->
+        <!--<li><a href="">不吃主食，真会健康嘛？</a></li>-->
+        <ng-container *ngFor="let healthsafety of _health | healthSafety">
+          <li><a (click)="toHealthDetail(healthsafety?.healthtitle)">{{healthsafety?.healthtitle}}</a></li>
+        </ng-container>
+      </ul>
+      <hr>
+      <h2 id="section-4">了解那些美食的历史典故</h2>
+      <ul>
+        <!--<li><a href="">南方春节食物的寓意</a></li>-->
+        <!--<li><a href="">腊月除了腊八粥还吃什么？</a></li>-->
+        <!--<li><a href="">豆腐脑的来历</a></li>-->
+        <!--<li><a href="">新疆手抓饭的来历</a></li>-->
+        <!--<li><a href="">老北京糕点的美食文化</a></li>-->
+        <!--<li><a href="">花椒得名于美女救人</a></li>-->
+        <!--<li><a href="">古人一日三餐制的由来</a></li>-->
+        <!--<li><a href="">酸奶的起源</a></li>-->
+        <ng-container *ngFor="let healthstory of _health | healthStory">
+          <li><a (click)="toHealthDetail(healthstory?.healthtitle)">{{healthstory?.healthtitle}}</a></li>
+        </ng-container>
+      </ul>
+      <hr>
+      <h2 id="section-5">茶说：我就是一杯水，你看到的是你的想象</h2>
+      <ul>
+        <!--<li><a href="">适合你的养生茶</a></li>-->
+        <!--<li><a href="">洞庭碧螺春的传说</a></li>-->
+        <!--<li><a href="">龙井茶的传说</a></li>-->
+        <!--<li><a href="">冻顶乌龙的传说</a></li>-->
+        <!--<li><a href="">大红袍的传说</a></li>-->
+        <!--<li><a href="">武夷岩茶铁罗汉的来源</a></li>-->
+        <!--<li><a href="">英国茶文化</a></li>-->
+        <!--<li><a href="">“茶禅一味”的佛家茶理</a></li>-->
+        <ng-container *ngFor="let healthtea of _health | healthTea">
+          <li><a (click)="toHealthDetail(healthtea?.healthtitle)">{{healthtea?.healthtitle}}</a></li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
+

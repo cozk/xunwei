@@ -1,0 +1,270 @@
+<app-header></app-header>
+<div class=" container">
+  <div class="row ">
+    <div class="col-lg-10 col-lg-offset-1" >
+      <div class="cp_header clearfix ">
+        <div class="cp_headerimg_w">
+          <img alt="" src="../../../assets/images/cook_detail/{{_detail?.ckdetailimg}}">
+        </div>
+        <div class="cp_main_info_w">
+          <div class="info1">
+            <h1 class="title" style="font-size: 24px;">
+              {{_detail.ckname}}
+            </h1>
+            <div class="favbtns">
+              <a class="addToFav_con" (click)="toAddCl()">收藏</a>
+            </div>
+          </div>
+          <div class="info2">
+            <ul class="clearfix">
+              <li class="w127">
+                <strong>工艺</strong>
+                <a  class="big">{{_detail.ckgongyi}}</a>
+              </li>
+              <li class="w270">
+                <strong>难度</strong>
+                <div class="processing_w">
+                  <span class="icon icon_nd"></span>
+                  <span class="processing processing_nd4"></span>
+                  <a  class="small">初级入门</a>
+                </div>
+              </li>
+              <li class="w270 br0">
+                <strong>人数</strong>
+                <div class="processing_w">
+                  <span class="icon icon_rs"></span>
+                  <span class="processing processing_nd9"></span>
+                  <a class="small">3人份</a>
+                </div>
+              </li>
+              <li class="w127 bb0">
+                <strong>口味</strong>
+                <a class="big">{{_detail.ckkouwei}}</a>
+              </li>
+              <li class="w270 bb0">
+                <strong>准备时间</strong>
+                <div class="processing_w">
+                  <span class="icon icon_zb"></span>
+                  <span class="processing processing_nd3"></span>
+                  <a  class="small">10分钟</a>
+                </div>
+              </li>
+              <li class="w270 bb0 br0">
+                <strong>烹饪时间</strong>
+                <div class="processing_w">
+                  <span class="icon icon_pr"></span>
+                  <span class="processing processing_nd1"></span>
+                  <a  class="small">&lt;5分钟</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="info3">
+            <div class="user">
+              <!--<a target="_blank" id="tongji_author_img" href="" class="img">-->
+                <!--<img src="../../../assets/images/cook_detail/tou01.png">-->
+                <!--<span class="masker pngFix"></span>-->
+              <!--</a>-->
+              <div class="info">
+                <h4>
+                  <a >作者：{{_detail.ckauthor}}</a>
+                </h4>
+                <!--<span>菜谱：2　/　关注：6　/　粉丝：32</span>-->
+                <strong >发布时间：{{_detail.cktime}}　</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cp_body clearfix">
+        <div class="cp_body_left">
+          <!--材料-->
+          <div class="materials">
+            <p><strong>“</strong>{{_detail.ckname}}是很好的下饭菜！赶紧动手试试吧！<strong>”</strong></p>
+            <strong class="cpc_h2">用料</strong>
+            <!--材料-->
+            <div class="materials_box">
+              <!--主料-->
+              <div class="yl fuliao clearfix">
+                <h3>
+                  <a>主料</a>
+                </h3>
+                <ul class="clearfix">
+
+                  <li class="">
+                    <h4>
+                      <a >{{_detail?.zhuliaoa}}</a>
+                    </h4>
+                    <span>适量</span>
+                  </li>
+                  <li class="br0">
+                    <h4>
+                      <a >{{_detail?.zhuliaob}}</a>
+                    </h4>
+                    <span>适量</span>
+                  </li>
+                  <li class="">
+                    <h4>
+                      <a >{{_detail?.zhuliaoc}}</a>
+                    </h4>
+                    <span>适量</span>
+                  </li>
+                </ul>
+              </div>
+              <!--辅料-->
+              <div class="yl fuliao clearfix">
+                <h3><a>辅料</a></h3>
+                <ul class="clearfix">
+                  <li class="">
+                    <h4>
+                      <a >{{_detail?.fuliaoa}}</a>
+                    </h4>
+                    <span>适量</span>
+                  <li class="br0">
+                    <h4>
+                      <a >{{_detail?.fuliaob}}</a>
+                  </h4>
+                  <span>适量</span>
+                </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--做菜步骤-->
+          <div class="measure">
+            <h2 class="cpc_h2">{{_detail?.ckname}}的做法</h2>
+            <div class="editnew edit">
+              <!--步骤1-->
+              <div  class="content clearfix">
+                <em class="step">1.</em>
+                <div class="c">
+                  <p>{{_detail?.ckbuzhoua}}</p>
+                  <p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.ckbzimga}}" alt=""></p>
+                </div>
+              </div>
+              <!--步骤2-->
+              <div  class="content clearfix">
+                <em class="step" >2.</em>
+                <div class="c">
+                  <p>{{_detail?.ckbuzhoub}}</p>
+                  <p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.ckbzimgb}}" alt=""></p>
+                </div>
+              </div>
+              <!--步骤3-->
+              <div  class="content clearfix">
+                <em class="step">3.</em>
+                <div class="c">
+                  <p>{{_detail?.ckbuzhouc}}</p>
+                  <p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.ckbzimgc}}" alt=""></p>
+                </div>
+              </div>
+              <!--步骤4-->
+              <div  class="content clearfix">
+                <em class="step">4.</em>
+                <div class="c">
+                  <p>{{_detail?.ckbuzhoud}}</p>
+                  <p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.ckbzimgd}}" alt=""></p>
+                </div>
+              </div>
+              <!--步骤5-->
+              <div  class="content clearfix">
+                <em class="step" >5.</em>
+                <div class="c">
+                  <p>{{_detail?.ckbuzhoue}}</p>
+                  <p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.ckbzimge}}" alt=""></p>
+                </div>
+              </div>
+              <!--步骤6-->
+              <!--<div  class="content clearfix">-->
+                <!--<em class="step" >6.</em>-->
+                <!--<div class="c">-->
+                  <!--<p>{{_detail?.buzouf}}</p>-->
+                  <!--<p><img class="conimg" src="../../../assets/images/cook_detail/{{_detail?.cookbookimgf}}" alt=""></p>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<p *ngFor="let item of zuopin;let i=index">-->
+                <!--<img style="margin:0 0 0 100px;" class="conimg" src="../../../assets/images/cook_detail/{{item.pic}}" alt="">-->
+              <!--</p>-->
+
+              <h2 class="cpc_h2">烹饪技巧</h2>
+              <p style="padding-left:100px;">{{_detail?.ckstory}}</p>
+            </div>
+
+          </div>
+          <!--&lt;!&ndash;评论&ndash;&gt;-->
+          <!--<div class="cp_comment">-->
+            <!--<div class="cp_comments_list">-->
+              <!--<div class="cp_com_form_w clearfix">-->
+                <!--<a target="_blank"  class="useravatar">-->
+                  <!--<img src="../../../assets/images/cook_detail/tou01.png"></a>-->
+                <!--<div class="form_w">-->
+                  <!--<div class="cp_pl_tag" id="cp_com_mask">-->
+                    <!--&lt;!&ndash;<em>给内容一个标签：</em>&ndash;&gt;-->
+                    <!--<span class="current" type="3">随意吐槽</span>-->
+                    <!--&lt;!&ndash;<span type="1">提问求解</span>&ndash;&gt;-->
+                  <!--</div>-->
+                  <!--<form #pingluncontentForm="ngForm">-->
+                    <!--<input name="id" type="hidden" id="news_id" value="1859288">-->
+                    <!--<input name="news_title" type="hidden" id="news_title" value="">-->
+                    <!--<input name="from_search" type="hidden" id="from_search" value="0">-->
+                    <!--<textarea  #plcontent="ngModel" [(ngModel)]="pl" name="content" placeholder="想说点什么..."></textarea>-->
+                    <!--<input type="button" data-toggle="modal" data-target="#myModal" class="di_btn" value="提交" (click)="topinglun(pingluncontentForm)" >-->
+                    <!--<input type="hidden" id="cp_com_type">-->
+                  <!--</form>-->
+                  <!--<a id="tongji_shangchuancgt"  target="_blank" title="" class="upload_zp_btn">上传成果作品</a>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--&lt;!&ndash;评论排序&ndash;&gt;-->
+          <!--<div class="cp_comlist_tab">-->
+            <!--<strong>评论排序：</strong>-->
+            <!--<span (click)="hot()" class="cp_comlist_tab1 current" id="cp_comlist_tab1">最新</span>-->
+            <!--<span (click)="newCook()" class="cp_comlist_tab2 " id="cp_comlist_tab2">最热</span>-->
+            <!--<input type="hidden" id="comment_order" value="new">-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash;最新评论&ndash;&gt;-->
+          <!--<div id="newspls">-->
+            <!--<div class="cp_comlist_w">-->
+              <!--<ul class="clearfix">-->
+
+                <!--<li class="clearfix commentslist_li" *ngFor="let item of comlist|orderBy:_hot | paginate: { itemsPerPage: 5, currentPage: p }">-->
+                    <!--<a target="_blank" href="" class="avatar">-->
+                      <!--<img src="../../../assets/images/cook_detail/{{item.touxiang}}">-->
+                      <!--<h5>{{item.userName}}</h5></a>-->
+                    <!--<div class="c">-->
+                      <!--<p class="p1"><strong>[随意吐槽]</strong>{{item.content}}</p>-->
+                      <!--<div class="info"><span>{{item.comTime}} 来自-->
+                      <!--<a target="_blank">寻味</a>-->
+                    <!--</span>-->
+                        <!--<a href="####" class="re re_start">回复</a>-->
+                        <!--<span class="zzzzan" id="zzzzan5964713" plid="5964713">-->
+                        <!--<em class="con_comlist_zanbtn"></em>-->
+                        <!--<strong>0</strong>-->
+                      <!--</span>-->
+                      <!--</div>-->
+                      <!--<div class="comscoms clearfix" style="display:none;">-->
+                        <!--<form class="re_form" action="" id="">-->
+                          <!--<input type="hidden" id="reply_id_5964713" value="5964713">-->
+                          <!--<textarea class="re_textarea" placeholder="我也说一句" id="text_5964713"></textarea>-->
+                          <!--<input type="button" onclick="submit_reply('5964713')" class="re_submit" value="回复">-->
+                        <!--</form>-->
+                      <!--</div>-->
+                    <!--</div>-->
+
+                  <!--</li>-->
+              <!--</ul>-->
+              <!--<pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>-->
+
+            <!--</div>-->
+          <!--</div>-->
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>

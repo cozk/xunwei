@@ -1,0 +1,195 @@
+*{
+  list-style-type:none;
+  padding:0px;
+  margin:0px;
+  font-family:"微软雅黑";
+}
+a{
+  text-decoration:none;
+}
+.left{
+  width: 717px;
+  float: left;
+}
+.pic{
+  width:100%;
+  height:300px;
+  background-color:rgba(250,232,200,0.5);
+}
+.pic ul li{
+  float:left;
+  height:300px;
+}
+.pic1{
+
+  background-image:url(./../../../assets/images/forumlunbo1.jpg);
+}
+.pic2{
+  background-image:url(./../../../assets/images/forumlunbo2.jpg);
+}
+
+.pic ul .pic3{
+  width:81%;
+  background-image:url(./../../../assets/images/forumlunbo3.jpg);
+
+}
+.text{
+  width:66px;
+  height:300px;
+  background-color:rgba(0,0,0,.5);
+}
+.text span{
+  color:#fff;
+  display: inline-block;
+}
+.text .p1{
+  font-size:15px;
+  width:14px;
+  margin-left: 8px;
+}
+.text .p2{
+  margin-left: 5px;
+  font-size:15px;
+  width:10px;
+  margin-top:55px;
+}
+
+
+.post{
+  width: 100%;
+
+}
+
+#topic{
+  height: 60px;
+  background-color: rgb(29,29,29);
+}
+
+.tuijian{
+  color: rgb(230,230,230);
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 30px;
+  line-height: 60px;
+}
+.fb{
+  display:inline-block;
+  padding-left: 500px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.fb:hover{
+  text-decoration:underline;
+}
+.card{
+  height: 115px;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+;
+}
+.card:hover{
+  background-color: beige;
+}
+
+.card .look{
+  float: left;
+  width: 13%;
+  height: 115px;
+}
+.lookspan{
+  display: inline-block;
+  height: 50px;
+  line-height: 20px;
+  width: 50px;
+  border: 1px solid green;
+  margin-top: 22px;
+  margin-left: 22px;
+  font-size: 12px;
+  text-align: center;
+  color: green;
+}
+.card .detail{
+  float: left;
+  width: 85%;
+  height: 115px;
+}
+.detailp1:hover{
+  color: red;
+  cursor: pointer;
+}
+.detailp1{
+  margin-top: 20px;
+  font-size: 18px;
+}
+.detailp2{
+  margin-top: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: grey;
+}
+.detailp2:hover{
+  color: black;
+}
+.detailp3{
+  margin-top: 7px;
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+}
+
+.right{
+  float: right;
+  width: 245px;
+  background-color: white;
+  height: 820px;
+}
+
+.publish{
+  width: 210px;
+  margin-left: 18px;
+  margin-top: 22px;
+  height:45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 15px;
+  background-color: #333333;
+}
+.publish a{
+  color: white;
+}
+.publish:hover{
+  background-color: rgb(29,29,29);
+}
+.authority{
+  float: left;
+  width: 210px;
+  margin-left: 18px;
+  margin-top: 10px;
+  padding-bottom: 14px;
+}
+.gfimg{
+  float: left;
+  height: 37px;
+  width: 37px;
+  background-color: #00CC33;
+  background-image: url(./../../../assets/images/shi.jpg);
+}
+.gfwords{
+  margin-left:10px;
+  float: left;
+  height: 37px;
+  width: 162px;
+
+}
+.gfwords a{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.gfwords a:hover{
+  color: grey;
+}

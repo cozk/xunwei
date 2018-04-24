@@ -1,0 +1,43 @@
+<!--菜谱顶部-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="header">
+      <div class="bg_nav">
+        <img src="../../assets/images/cookbook/bg01.jpg" alt="">
+      </div>
+      <app-cookbooks-search #search></app-cookbooks-search>
+    </div>
+  </div>
+</div>
+
+<!--菜谱主体-->
+
+
+
+<div class="main container col-lg-10 col-lg-offset-1 ">
+  <!--顶部下面导航-->
+
+  <div class="cook_nav navbar ">
+    <!--<span class="active" style="display: inline-block; font-size: 24px; color: #ff6767;float: left;line-height: 50px">我的美食属性</span>-->
+
+    <ul  class="nav nav-tabs " id="myTab">
+      <li><a  routerLink="./jiachang" routerLinkActive="active">家常菜谱</a></li>
+      <li><a  routerLink="./zhonghua" routerLinkActive="active">中华菜谱</a></li>
+      <li><a  routerLink="./waiguo" routerLinkActive="active">外国菜谱</a></li>
+      <li><a  routerLink="./hongpei" routerLinkActive="active" style="width:112px;text-align: center">烘培</a></li>
+    </ul>
+  </div>
+  <div >
+    <router-outlet>
+
+
+    </router-outlet>
+
+
+  </div>
+</div>
+
+<!--菜谱底部-->
+<!--<div class="cookfooter">-->
+  <!--<app-footer></app-footer>-->
+<!--</div>-->

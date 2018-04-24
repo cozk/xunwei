@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container center-block  search_nav">
+        <form  #searchForm="ngForm" >
+          <div class="form-group col-md-6">
+            <input type="text" name="text" #search="ngModel" [(ngModel)]="text" placeholder="请输入" class="form-control input-lg" required >
+          </div>
+          <button type="button"  class="btn btn-success search_btn btn-lg col-md-2" (click)="toList(text)">搜索</button>
+        </form>
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+/*h3,p{*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+/*}*/
+/*.confirm {*/
+  /*width: 400px;*/
+  /*height: 200px;*/
+  /*border: 1px solid #CCC;*/
+  /*border-radius: 10px;*/
+  /*text-align: center;*/
+  /*position: absolute;*/
+  /*background-color: #FFF;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-left: -200px;*/
+  /*padding-top: 50px;*/
+  /*box-sizing: border-box*/
+
+/*}*/
+
+/*p{*/
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+/*}*/
+#mynav>li>a:checked
+{
+  border-color: #666;
+  color: #fff;
+  background: #4a4849;
+}

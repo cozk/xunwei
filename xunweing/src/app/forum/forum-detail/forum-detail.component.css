@@ -1,0 +1,164 @@
+ul{
+  list-style: none;
+
+}
+.top{
+  width: 100%;
+  height:60px;
+  background-color: rgba(29,29,29,0.8);
+}
+.btn_return{
+  font-size: 18px;
+  padding: 8px 13px 8px 13px;
+  border: 0px solid black;
+  border-radius: 3px;
+  margin-left: 23px;
+  background-color: grey;
+  text-decoration: none;
+  color:white;
+  cursor: pointer;
+}
+.btn_return:hover{
+  background-color: darkgray;
+}
+.btn_reply:hover{
+  background-color: darkgray;
+}
+.btn_reply{
+  font-size: 18px;
+  padding: 8px 13px 8px 13px;
+  border: 0px solid black;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: grey;
+  color:white;
+}
+.houster{
+  float: left;
+  width: 100%;
+  background-color: rgba(250,250,250,0.9);
+  border-top: 1px solid rgb(229,229,229);
+}
+.houster_left{
+  float: left;
+  width: 225px;
+}
+.houster_id{
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 22px;
+  margin-top: 22px;
+}
+.houster_left img{
+  margin-left: 22px;
+}
+.houster_left span{
+  display: inline-block;
+  margin-top: 22px;
+  background-color: rgb(238,238,238);
+  width: 60px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  cursor: pointer;
+}
+.houster_left span:hover{
+  background-color: rgb(228,228,228);
+}
+.sp1{
+  margin-left: 70px;
+}
+.houster_detail{
+  margin-top: 30px;
+  margin-left: -18px;
+  clear: both;
+}
+.houster_right{
+  float: left;
+  width: 720px;
+}
+.post_detail{
+  background-color: white;
+  padding: 15px;
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.post_detailxia{
+  background-color: white;
+  padding: 15px;
+  height:300px;
+  width: 100%;
+}
+.huifu{
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid rgb(229,229,229);
+}
+.hf{
+  padding: 5px;
+  font-size: 15px;
+  background-color: rgb(245,245,245);
+  width: 100%;
+}
+.huifu span{
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.huifu span:hover{
+  color: grey;
+}
+.huifu_detail{
+  width: 100%;
+  background-color: white;
+  padding: 0px 22px 22px 22px;
+}
+.huifu_wai{
+  width: 100%;
+  background-color: rgb(245,245,245);
+  height: 190px;
+  padding: 22px 22px 0px 22px;
+}
+.input_text{
+  width: 100%;
+  height: 95px;
+  padding: 10px;
+}
+.input_reply{
+  float: right;
+  height: 41px;
+  width: 101px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(29,29,29);
+  border: 1px solid rgb(29,29,29);
+  margin-top: 10px;
+}
+
+.di{
+  float: left;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  height:290px;
+}
+.di_right{
+  float: left;
+  width:720px;
+  padding: 53px 22px 0px 22px;
+}
+.di_btn{
+  float: right;
+  height: 41px;
+  width: 101px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(29,29,29);
+  border: 1px solid rgb(29,29,29);
+}

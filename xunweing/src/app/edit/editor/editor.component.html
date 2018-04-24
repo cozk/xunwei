@@ -1,0 +1,60 @@
+<div class="col-md-12 col-lg-12">
+<div class="row">
+  <div class="coll">
+    <br>
+    <br>
+      <form class="form-horizontal" #editForm="ngForm">
+        <div class="form-group ">
+          <label for="nickname" class="col-sm-2 control-label" >昵称</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" #nick="ngModel" [(ngModel)]="nickname" id="nickname" name="nickname" minlength="1" maxlength="10" placeholder="请输入新昵称" required>
+          </div>
+        </div>
+        <div *ngIf="nick.invalid && (nick.dirty || nick.touched)" class="form-group text-danger col-md-2 col-md-push-2">
+          <div *ngIf="nick.errors.required">
+            昵称不能为空
+          </div>
+          <div *ngIf="nick.errors.maxlength">
+            昵称小于10个字
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group " >
+          <label  class="col-sm-2 control-label">性别</label>
+            <div class="col-sm-2">
+              <select class="form-control" #nick="ngModel" [(ngModel)]="sex" id="sex" name="sex">
+                <option value="0">其他</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+              </select>
+            </div>
+        </div>
+        <br>
+        <br>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="button" (click)="toEdit(editForm)" class="btn btn-success" style="background-color: grey; color: white;border: none" [disabled]="editForm.form.invalid" value="提交" />
+          </div>
+        </div>
+        <br>
+      </form>
+  </div>
+  <button data-toggle="modal" id="modal" class="btn btn-default hidden"></button>
+  <div id="myModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="media-heading">
+          <h2>友情提醒</h2>
+        </div>
+        <div class="modal-body" id="modal_login_body">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">退出</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

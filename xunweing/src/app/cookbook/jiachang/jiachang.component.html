@@ -1,0 +1,39 @@
+
+<div class="container animated fadeInLeft">
+
+
+
+  <div class="row">
+    <div class="top_dl ">
+      <dl>
+        <dt>家常菜谱</dt>
+        <dd *ngFor="let item of jiachang;let i=index">
+          <a (click)="jia(item.jia)">{{item.jia}}</a></dd>
+      </dl>
+      <div class="books_title ">
+        <p>印象中的那些妈妈的味道</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row animated fadeInLeft ">
+    <ul>
+    <li class="col-xs-6 col-md-3 hvr-float" *ngFor="let cook of _cooks|jiachang|paginate: { itemsPerPage: 8, currentPage: p }">
+          <a  (click)="toCookdetail(cook?.ckname)"  class="thumbnail ">
+            <div class="hovereffect">
+              <img class="img-responsive" src="../../../assets/images/cookbook/{{cook?.ckimg}}" alt="...">
+
+            </div>
+            <div class="caption text-left">
+              <p style="margin-bottom: 5px"><strong class="title">{{cook?.ckname}} </strong></p>
+              <span>人气&nbsp;&nbsp;{{cook?.ckrenqi}}</span>
+              <p>{{cook?.ckauthor}} &nbsp;&nbsp;<span style="color: grey;font-size: 12px;">{{cook?.cktime}}</span></p>
+            </div>
+          </a>
+       </li>
+    </ul>
+  </div>
+  <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+
+

@@ -1,0 +1,31 @@
+<div class="mynav">
+  <div class="mynav-logo">
+    <a (click)="toindex()"><img class="myheader-logo" src="../../../assets/images/logo/logobottom.png" alt=""></a>
+  </div>
+
+  <div class="mynav-list">
+    <span><a routerLink="/index" routerLinkActive="active">首页</a></span>
+    <span><a routerLink="/cookbook" routerLinkActive="active">菜谱</a></span>
+    <span><a routerLink="/health" routerLinkActive="active">健康新闻</a></span>
+    <span><a routerLink="/forum" routerLinkActive="active">社区广场</a></span>
+    <span><a routerLink="/personal-center" routerLinkActive="active">个人中心</a></span>
+  </div>
+  <div class="mynav-login">
+    <ul class="myhead-login "*ngIf="_hiddenNavs">
+      <button class="myradius-login" (click)="tologin()">登录</button>
+      <button class="myradius-regist" (click)="toregister()">注册</button>
+    </ul>
+
+    <div class="dropdown "*ngIf="!_hiddenNavs">
+      <button class=" dropdown-toggle myradius-welcome" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        欢迎:{{name}}
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="min-width: 100px ;text-align: center">
+        <li class="li_exit"><a (click)="toexit()">退出</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

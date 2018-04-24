@@ -1,0 +1,180 @@
+<div>
+  <!--背景-->
+  <div class="video-wrap ">
+    <!--<video src="./../../assets/images/loginbg.mp4" autoplay loop></video>-->
+    <img src="../../assets/images/bg.jpg"/>
+  </div>
+  <!--注册-->
+  <div class="main">
+    <img src="../../assets/images/logo/logotop.png" height="74" width="92"/>
+    <!--<div class="row">-->
+    <!--<h2>手机注册</h2>-->
+    <form #registerForm="ngForm">
+      <ul>
+        <li>
+          <i class="glyphicon glyphicon-phone"></i>
+          <input type="text" #tel="ngModel" [(ngModel)]="_telephone"
+                 pattern="^1[34578]\d{9}$" id="telephone" name="telephone" placeholder="请输入手机号码" required>
+        </li>
+        <li>
+          <div *ngIf="tel.invalid && (tel.dirty || tel.touched)">
+            <div class="left" *ngIf="tel.errors.required">
+              <i class="glyphicon glyphicon-remove"></i>
+              号码不能为空
+            </div>
+            <div class="left" *ngIf="tel.errors.pattern">
+              <i class="glyphicon glyphicon-remove"></i>
+              号码格式不正确
+            </div>
+          </div>
+        </li>
+        <!--<li>-->
+          <!--<i class="glyphicon glyphicon-tags"></i>-->
+          <!--<input type="text" #code="ngModel" [(ngModel)]="_idCode" id="idCode"-->
+                 <!--name="idCode" placeholder="请输入验证码" maxlength="6">-->
+          <!--<button class="btn btn-success ab" (click)="getCode(registerForm)" id="code1">获取验证码</button>-->
+
+        <!--</li>-->
+        <!--<li>-->
+          <!--<div class="left" *ngIf="_notel">-->
+            <!--<i class="glyphicon glyphicon-remove"></i>-->
+            <!--{{_notel}}-->
+          <!--</div>-->
+        <!--</li>-->
+        <li>
+          <i class="glyphicon glyphicon-pencil"></i>
+          <input type="password" #pass="ngModel" [(ngModel)]="_password" minlength="7"
+                 id="password"
+                 name="password" placeholder="请输入密码" required>
+        </li>
+        <li>
+          <div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+
+            <div class="left" *ngIf="pass.errors.required">
+              <i class="glyphicon glyphicon-remove"></i>
+              密码不能为空
+            </div>
+
+            <div class="left" *ngIf="pass.errors.minlength">
+              <i class="glyphicon glyphicon-remove"></i>
+              密码大于六位
+            </div>
+          </div>
+        </li>
+        <li>
+          <i class="glyphicon glyphicon-user"></i>
+          <input type="text" #nick="ngModel" [(ngModel)]="nickname" id="nickname" name="nickname"
+                 minlength="1" maxlength="10" placeholder="请输入昵称小于10个字" required>
+        </li>
+        <li>
+          <div *ngIf="nick.invalid && (nick.dirty || nick.touched)">
+            <div class="left" *ngIf="nick.errors.required">
+              <i class="glyphicon glyphicon-remove"></i>
+              昵称不能为空
+            </div>
+            <!--<div class="left" *ngIf="nick.errors.maxlength">-->
+            <!--<i class="glyphicon glyphicon-remove"></i>-->
+            <!--昵称小于10个字-->
+            <!--</div>-->
+          </div>
+        </li>
+        <li>
+          <button class="btn btn-success regist" type="button" (click)="toRegister(registerForm)"
+                  [disabled]="registerForm.form.invalid">注册
+          </button>
+        </li>
+        <li></li>
+        <li>
+          <div class="box">
+            <!--<div class="email">-->
+              <!--&lt;!&ndash;<a href="">邮箱注册</a>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="login">-->
+              <a routerLink="/login" routerLinkActive="active">已有账号？马上登录</a>
+            <!--</div>-->
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+<!--&lt;!&ndash;输入手机号码&ndash;&gt;-->
+<!--<div class="form-group  col-md-8 col-md-offset-2">-->
+<!--&lt;!&ndash;<label for="telephone">手机号码:</label>&ndash;&gt;-->
+<!--<input type="text" class="form-control has-feedback" #tel="ngModel" [(ngModel)]="_telephone"-->
+<!--pattern="^1[34578]\d{9}$" id="telephone" name="telephone" placeholder="请输入手机号码" required>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;手机号码验证&ndash;&gt;-->
+<!--<div *ngIf="tel.invalid && (tel.dirty || tel.touched)"-->
+<!--class="form-group text-danger col-md-8 col-md-offset-2 ">-->
+<!--<div *ngIf="tel.errors.required">-->
+<!--号码不能为空-->
+<!--</div>-->
+<!--<div *ngIf="tel.errors.pattern">-->
+<!--号码格式不正确-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;验证码&ndash;&gt;-->
+<!--<div class="form-group col-md-8 col-md-offset-2">-->
+<!--<div class="pad0 col-md-6 ">-->
+<!--<input type="text" class="form-control has-feedback" #code="ngModel" [(ngModel)]="_idCode" id="idCode"-->
+<!--name="idCode" placeholder="请输入验证码" required>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-md-offset-1">-->
+<!--<button class="btn btn-default" (click)="getCode(registerForm)">获取验证码</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;输入密码&ndash;&gt;-->
+<!--<div class="form-group col-md-8 col-md-offset-2">-->
+<!--&lt;!&ndash;<label for="password">密码:</label>&ndash;&gt;-->
+<!--<input type="password" class="form-control" #pass="ngModel" [(ngModel)]="_password" minlength="6" id="password"-->
+<!--name="password" placeholder="请输入密码" required>-->
+<!--</div>-->
+<!--&lt;!&ndash;密码验证&ndash;&gt;-->
+<!--<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"-->
+<!--class="form-group text-danger col-md-8 col-md-offset-2 ">-->
+
+<!--<div *ngIf="pass.errors.required">-->
+<!--密码不能为空-->
+<!--</div>-->
+<!--<div *ngIf="pass.errors.minlength">-->
+<!--密码大于六位-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group ">-->
+<!--<div class="form-group col-md-8 col-md-offset-2">-->
+<!--<input type="text" class="form-control" #nick="ngModel" [(ngModel)]="nickname" id="nickname" name="nickname"-->
+<!--minlength="1" maxlength="10" placeholder="请输入昵称" required>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div *ngIf="nick.invalid && (nick.dirty || nick.touched)" class="form-group text-danger col-md-2 col-md-push-2">-->
+<!--<div *ngIf="nick.errors.required">-->
+<!--昵称不能为空-->
+<!--</div>-->
+<!--<div *ngIf="nick.errors.maxlength">-->
+<!--昵称小于10个字-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<button type="button" (click)="toRegister(registerForm)" [disabled]="registerForm.form.invalid"-->
+<!--class="btn btn-success col-md-offset-5 col-md-2">注册-->
+<!--</button>-->
+
+<!--</form>-->
+
+<!---------------------------------------------------->
+<!--<div *ngIf="_notel" class="error">-->
+<!--{{_notel}}-->
+<!--</div>-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<div class=" col-md-8 col-md-offset-2 m10">-->
+<!--<a href="">邮箱注册</a>-->
+<!--</div>-->
+<!--<div class="col-md-8 col-md-offset-6 ">-->
+<!--<a routerLink="/login" routerLinkActive="active">已有账号？马上登录</a>-->
+<!--</div>-->
+

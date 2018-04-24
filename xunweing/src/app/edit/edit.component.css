@@ -1,0 +1,21 @@
+._body{
+  /*background: #FAE8C8;*/
+  background-image: url("../../assets/images/personnal.jpg");
+  height: 550px;
+}
+
+h3{
+  text-align: center;
+}
+a{
+  color:black;
+  text-decoration: none;
+}
+.active{
+  opacity: 0.9;
+  background: grey;
+  color: white;
+}
+
+
+

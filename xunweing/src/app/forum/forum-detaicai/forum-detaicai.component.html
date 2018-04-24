@@ -1,0 +1,179 @@
+<div style="background-color: rgb(250,250,250);width: 100%; float: left;background-image: url(./../../../assets/images/forumbody2.jpg);background-attachment: fixed">
+  <div class="container">
+    <div class="row" style="text-align: center;">
+      <h3 style="padding: 15px; color: white">有人的地方才有力量</h3>
+    </div>
+  </div>
+
+  <div class="col-lg-10  col-lg-offset-1">
+    <div class="top">
+      <br>
+      <a class="btn_return" (click)="toforumbody()" >返回</a>
+
+    </div>
+
+    <div class="houster">
+      <div class="houster_left">
+        <p class="houster_id">{{_detailcai?.name}}</p>
+        <div style="height: 160px;width: 160px;">
+        <img src="http://127.0.0.1:3000/uploads/personal/{{_detailcai?.icon}}" style="height: 100%;width: 100%;">
+        </div>
+        <br>
+        <span class="sp1" (click)="addat(_detailcai?.telephone)">加关注</span>
+        <ul class="houster_detail">
+          <li>关注&nbsp;{{_detailcai?.guanzhu}}</li>
+          <li>粉丝&nbsp;{{_detailcai?.fensi}}</li>
+          <li>注册&nbsp;{{_detailcai?.usertime}}</li>
+        </ul>
+      </div>
+
+      <div class="houster_right">
+        <div style="height: 53px;width: 100%; line-height: 53px;">
+          <p>发表于&nbsp;&nbsp;{{_detailcai?.cooktime}}</p>
+        </div>
+        <div class="post_detail" >
+          <h4>{{_detailcai?.biaoti}}</h4>
+          <p *ngIf="_detailcai?.cookbookimga">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzoua}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimga">
+          <img *ngIf="_detailcai?.cookbookimga" src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimga}}">
+          </div>
+          <p *ngIf="_detailcai?.cookbookimgb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzoub}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimgb">
+          <img *ngIf="_detailcai?.cookbookimgb" src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimgb}}">
+          </div>
+            <p *ngIf="_detailcai?.cookbookimgc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzouc}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimgc">
+          <img *ngIf="_detailcai?.cookbookimgc" src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimgc}}">
+          </div>
+            <p *ngIf="_detailcai?.cookbookimgd" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzoud}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimgd">
+          <img *ngIf="_detailcai?.cookbookimgd" src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimgd}}">
+          </div>
+            <p *ngIf="_detailcai?.cookbookimge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzoue}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimge">
+          <img *ngIf="_detailcai?.cookbookimge"  src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimge}}">
+          </div>
+          <p *ngIf="_detailcai?.cookbookimgf">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{_detailcai?.buzouf}}</p>
+          <div class="preview" *ngIf="_detailcai?.cookbookimgf">
+          <img *ngIf="_detailcai?.cookbookimgf"  src="http://127.0.0.1:3000/uploads/cookbook/{{_detailcai?.cookbookimgf}}">
+          </div>
+        </div>
+        <div class="huifu">
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="houster" *ngFor="let detailpl of _pinglun| paginate: { itemsPerPage: 6, currentPage: p  };let index=index">
+      <div class="houster_left">
+        <p class="houster_id">{{detailpl?.name}}</p>
+        <div style="height: 160px;width: 160px;">
+        <img src="http://127.0.0.1:3000/uploads/personal/{{detailpl?.icon}}" style="width: 100%;height: 100%">
+        </div>
+        <!--<img src="http://localhost:3000/uploads/personal/{{icon}}">-->
+        <br>
+        <ul class="houster_detail">
+          <li>发帖&nbsp;{{detailpl?.fatie}}</li>
+          <li>关注&nbsp;{{detailpl?.guanzhu}}</li>
+          <li>粉丝&nbsp;{{detailpl?.fensi}}</li>
+          <li>注册&nbsp;{{detailpl?.usertime}}</li>
+        </ul>
+      </div>
+
+      <div class="houster_right">
+        <div style="height: 53px;width: 100%; line-height: 53px;">
+          <p>发表于&nbsp;&nbsp;{{detailpl?.pingluntime}}&nbsp;&nbsp;</p>
+        </div>
+        <div class="post_detailxia">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{detailpl?.pingluncontent}}</div>
+        <div class="hf" style="background-color: white;border-top:1px solid rgb(229,229,229)">
+          <app-forum-huifu [data]="detailpl?.plid"></app-forum-huifu>
+        </div>
+        <div class="huifu">
+          <span class="huifub" (click)="xianshi(index)">回复</span>
+        </div>
+        <div class="huifu_detail" *ngIf="xian==index" >
+          <form  #huifuForm="ngForm">
+            <div class="huifu_wai">
+              <textarea class="input_text" #plhf="ngModel" [(ngModel)]="plh" name="huifucontent" placeholder="我也说一句..."></textarea>
+              <input type="button" class="input_reply" data-toggle="modal" data-target="#myModal" (click)="tohf(huifuForm,detailpl?.name,detailpl?.plid)" value="回复">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div style="width: 100%;background-color: white;height: 82px;float: left;border-top:1px solid gainsboro">
+      <pagination-controls class="pagination" (pageChange)="p = $event" style="float: right;margin-right: 200px;cursor: pointer"></pagination-controls>
+    </div>
+
+
+
+
+
+
+
+    <!--<div style="width: 100%;background-color: white;height: 82px;float: left;border-top:1px solid gainsboro">-->
+    <!--<nav aria-label="Page navigation" style="float: right;margin-right: 50px;">-->
+    <!--<ul class="pagination">-->
+    <!--<li class="disabled">-->
+    <!--<a href="#" aria-label="Previous">-->
+    <!--<span aria-hidden="true">&laquo;</span>-->
+    <!--</a>-->
+    <!--</li>-->
+    <!--<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>-->
+    <!--<li><a href="#">2</a></li>-->
+    <!--<li><a href="#">3</a></li>-->
+    <!--<li><a href="#">4</a></li>-->
+    <!--<li><a href="#">5</a></li>-->
+    <!--<li>-->
+    <!--<a href="#" aria-label="Next">-->
+    <!--<span aria-hidden="true">&raquo;</span>-->
+    <!--</a>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+    <!--</div>-->
+
+
+    <div style="clear: both"></div>
+    <br><br><br>
+    <div class="di" id="di1"  *ngIf="!_hiddenNavs">
+      <div class="houster_left">
+        <p class="houster_id">{{name}}</p>
+        <div style="height: 160px;width: 160px;">
+        <img src="http://127.0.0.1:3000/uploads/personal/{{icon}}" style="height: 100%;width: 100%">
+        </div>
+      </div>
+      <form style="float: left" #pingluncontentForm="ngForm">
+        <div class="di_right">
+          <!--<textarea class="ta" style="width: 100%;height: 180px;" placeholder="我也说一句..." name="plcontent"></textarea>-->
+          <textarea class="ta" style="width: 100%;height: 180px;" placeholder="我也说一句..." #plcontent="ngModel" [(ngModel)]="pl" name="content" ></textarea>
+          <input type="button" data-toggle="modal" data-target="#myModal" class="di_btn" (click)="topinglun(pingluncontentForm)" value="提交">
+        </div>
+      </form>
+    </div>
+    <!--<a data-toggle="modal" data-target="#myModal">打开模态窗口</a>-->
+    <div id="myModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="media-heading">
+            <h2>友情提醒</h2>
+          </div>
+          <div class="modal-body">
+            <p>回复成功！</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">退出</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="clear: both"></div>
+  <br><br><br>
+</div>

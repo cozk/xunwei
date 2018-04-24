@@ -1,0 +1,182 @@
+<!--=================================================================首页轮播部分start-->
+<app-index-rotation></app-index-rotation>
+<!--=================================================================首页轮播部分终-->
+
+<!--=================================================================首页锚点导航start-->
+<div class="index-nav">
+  <div class="nav-left col-sm-4 col-md-4 col-lg-4">
+    <ul>
+      <li class="col-sm-6 col-md-6 col-lg-6"><a href="#index-transition">一人食</a></li>
+      <li class="col-sm-6 col-md-6 col-lg-6"><a href="#index-health">超健康</a></li>
+
+    </ul>
+  </div>
+
+  <div class="nav-mid col-sm-4 col-md-4 col-lg-4">
+    <span>XunWei</span>
+  </div>
+
+  <div class="nav-right col-sm-4 col-md-4 col-lg-4">
+    <ul>
+      <li class="col-sm-6 col-md-6 col-lg-6"><a href="#index-hot-menu">热门菜谱</a></li>
+      <li class="col-sm-6 col-md-6 col-lg-6"><a href="#index-hot-topic">热门话题</a></li>
+    </ul>
+  </div>
+</div>
+<!--=================================================================首页锚点导航终-->
+
+
+<!--=================================================================一人食部分start-->
+<div class="container">
+  <div class="row">
+    <div class="index-transition" name="index-transition" id="index-transition">
+      <h3>一人食</h3>
+      <ul class="alone-box">
+        <li class="left-top">
+          <img src="./../../assets/images/index-alone/11.jpg" alt="">
+        </li>
+        <li class="right-top">
+          <p>「一人食」想告诉你：一个人吃饭，更不能随便，不能将就，它是静静享受、品味快乐的最佳时光，一个人也要好好吃饭！</p>
+          <p>食物有超乎想象的治愈力量，它能填饱你的肚子，更能治愈你的孤独。</p>
+          <p>在漫长的人生旅途中，难免有一段或者几段一个人吃饭的时候，学会与食物对话，享受它，也尊重它，这正是「一人食」想要传达的善意。</p>
+        </li>
+        <li class="left-bottom">
+          <p>多，不一定就是好，一个人不一定就是孤独。</p>
+          <p>理想如彩虹，也许正因为触摸不到，才显得更加美丽。</p>
+          <p>即便一无所有，也不能没有胃口。</p>
+          <p>每天留出一段与美食相处的时间。</p>
+        </li>
+        <li class="right-botom">
+          <div class="one">
+            <img src="./../../assets/images/index-alone/09.jpg" alt="">
+          </div>
+          <div class="two">
+            <img src="./../../assets/images/index-alone/14.jpg" alt="">
+          </div>
+          <div class="three">
+            <img src="./../../assets/images/index-alone/15.jpg" alt="">
+          </div>
+          <div class="four">
+            <img src="./../../assets/images/index-alone/20.jpg" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--=================================================================一人食部分终-->
+
+
+<!--=================================================================超健康部分开始-->
+<div class="container">
+  <div class="row">
+    <div class="index-health" name="index-health" id="index-health">
+      <h3>超健康</h3>
+
+      <ul class="ch-grid">
+        <ng-container *ngFor="let health of _indexhealth">
+          <li class="col-lg-3" (click)="toHealthDetail(health?.healthtitle)">
+            <div class="ch-item">
+              <div class="ch-info">
+                <div class="ch-info-front ch-img-2">
+                  <img class="circle-img" src="{{health?.indeximg}}" height="232" width="232"/>
+                </div>
+                <div class="ch-info-back">
+                  <h5>↓</h5>
+                  <p>
+                    <a (click)="toHealthDetail(health?.healthtitle)">More</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4>
+              <a class="mynews" (click)="toHealthDetail(health?.healthtitle)">{{health?.healthtitle}}</a>
+            </h4>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--=================================================================超健康部分终-->
+<!--=================================================================水果部分终-->
+
+<div class="container-fluid">
+  <div class="row">
+    <img class="fall" src="./../../assets/images/index-banner/fall.jpg" alt="">
+    <div class="fruit">
+      <h3>
+        深秋十月，养生防燥多食温性食物
+      </h3>
+      <ul>
+        <li><img src="./../../assets/images/index-fruit/banana.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/eggplant.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/grapes.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/mango.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/pear.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/potato.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/tamato.jpg" alt=""></li>
+        <li><img src="./../../assets/images/index-fruit/melon.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--=================================================================水果部分终-->
+
+
+<!--=================================================================热门菜谱部分start-->
+<div class="container ">
+  <div class="row">
+    <div class="index-hot-menu" name="index-hot-menu" id="index-hot-menu">
+      <h3>热门菜谱</h3>
+      <div id="hotmenu-container">
+        <div class="mymenu">
+          <ng-container *ngFor="let hotmenu of _indexcookbook|indexhotmenu">
+            <div class="mymenu-list ">
+              <a (click)="toCookBookDetail(hotmenu?.ckname)">
+                <img src="../../assets/images/index-hotmenu/{{hotmenu?.ckimg}}" alt="">
+                <div class="mymenu-hovor">
+                  <h2 class="mymenu-title">{{hotmenu?.ckname}}</h2>
+                  <p>作者：{{hotmenu?.ckauthor}}<br>发布时间：{{hotmenu?.cktime}}</p>
+                </div>
+              </a>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=================================================================热门菜谱部分终-->
+
+
+
+<!--=================================================================热门话题部分start-->
+<div class="container">
+  <div class="row">
+    <div class="index-hot-topic" name="index-hot-topic" id="index-hot-topic">
+      <h3>热门话题</h3>
+      <div class="row">
+        <ul>
+          <ng-container *ngFor="let hottopic of _forumbody|queren3">
+            <li class="index-hot-topic-info col-sx-12 col-sm-4 col-md-4 col-lg-4">
+              <a class="myhottopic" (click)="forumdetail(hottopic?.title)">
+                <img src="./../../assets/images/index-hottopic/{{hottopic?.pdimg}}" height="210" width="316"/>
+              </a>
+              <div class="myhottopictit">
+                <a (click)="forumdetail(hottopic?.title)"><h4>{{hottopic?.title}}</h4></a>
+                <p>发帖人：{{hottopic?.userid}}</p>
+                <p>发帖时间：{{hottopic?.posttime}}</p>
+              </div>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--=================================================================热门话题部分终-->
+
+
+<!--<app-footer></app-footer>-->
+

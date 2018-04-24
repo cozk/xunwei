@@ -1,0 +1,54 @@
+.btn{
+  color: white;
+  background: grey;
+  margin-top: 8px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  font-family: inherit;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.work{
+  background: white;
+  margin-top: -20px;
+  opacity: 0.9
+}
+ul{
+  list-style: none;
+}
+.li{
+  width: 100%;
+  height: 200px;
+}
+.left{
+  float: left;
+  width: 20%;
+  height: 200px;
+}
+.left img{
+  width: 200px;
+  height: 200px;
+}
+.right{
+  float: left;
+  width: 80%;
+  height: 200px;
+  padding-left: 50px;
+}
+.right .gs {
+  float: left;
+  font-size: 1.3em;
+}
+.ups{
+  cursor: pointer;
+}

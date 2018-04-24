@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default col-md-12 col-lg-12" style="opacity: 0.9">
+  <div class="navbar-header">
+    <button type="button" class="btn">我的收藏</button>
+  </div>
+</nav>
+<div class="col-md-12 col-lg-12">
+  <div class="row">
+    <div class="com">
+      <ul *ngFor="let cl of _collections|paginate: { itemsPerPage:6, currentPage: p }" >
+        <div style="height: 8px;"></div>
+        <li class="li">
+          <div>关注者:{{cl.name}}</div>
+          <div>关注:{{cl.guanzhu}}&nbsp;&nbsp;&nbsp;&nbsp;粉丝:{{cl.fensi}}</div>
+          <div>注册时间:{{cl.usertime}}</div>
+          <br>
+        </li>
+      </ul>
+      <div *ngIf="page">
+        <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event" style="margin: 0 auto;text-align: center
+;cursor: pointer"></pagination-controls>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,139 @@
+ul{
+  list-style: none;
+}
+.bg_nav{
+  width: 100%;
+  height: 500px;
+  /*padding: 0;*/
+  overflow: hidden;
+  position: relative;
+}
+.bg_nav img{
+  width: 100%;
+}
+.navbar{margin-bottom: 0}
+/*搜索栏*/
+.search_nav{
+  position: absolute;
+  top:400px;
+  left: 360px;
+}
+.search_btn{
+  background: #00b38a ;
+  border: 0;
+}
+.search_btn:hover{
+  background: #00cd9d;
+}
+.col-md-6{
+  padding-right:0 ;
+}
+.main{
+  /*background:#a94442;*/
+  /*height:1700px;*/
+}
+.main ul{
+  margin: 0;
+  padding: 0;
+  /*margin-top: 50px;*/
+}
+
+.cook_nav{
+  /*background: #00b38a;*/
+  /*height: 240px;*/
+  width: 100%;
+  margin-top:50px;
+}
+.cook_nav #myTab a{
+  font-size: 20px;
+  border: 0px solid #39414a;
+  color: #39414a;
+  border-radius: 3px;
+}
+#myTab>li>a:hover
+{
+  border-color: #666;
+  color: #fff;
+  background: #4a4849;
+}
+#myTab>li>a:checked
+ {
+   border-color: #666;
+   color: #fff;
+   background: #4a4849;
+ }
+.cook_nav dl dt{
+  display: Block;
+  height: 42px;
+  line-height: 42px;
+  font-size: 24px;
+  color: #333;
+  font-family: 幼圆;
+  position: relative;
+}
+.cook_nav dd{
+  font-size: 14px;
+  color: #666;
+  display: inline-block;
+  vertical-align: top;
+  height: 28px;
+}
+.cook_nav dd a{
+  padding: 0px 8px;
+  display: inline-block;
+  vertical-align: top;
+  height: 28px;
+  line-height: 28px;
+  color: #666
+}
+.cook_nav dd a:hover{
+  color: red;
+  /*display: inline-block;*/
+  /*background: red;*/
+  text-decoration: none;
+}
+.books_title{
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  /*background: #ffaccd;*/
+  font-size: 24px;
+}
+a.thumbnail:hover {
+  border-color:#ddd;
+}
+a:hover{
+  text-decoration: none;
+}
+.cookfooter{
+  float: left;
+  width: 100%;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+
+
+
+

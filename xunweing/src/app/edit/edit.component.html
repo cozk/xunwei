@@ -1,0 +1,24 @@
+<div class="_body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-10 col-md-push-1">
+        <br>
+        <br>
+        <h3>修改个人资料</h3>
+        <br>
+        <br>
+        <nav class="navbar navbar-default col-md-12 col-lg-12">
+              <a (click)="toper()" class="glyphicon glyphicon-menu-left" style="cursor: pointer"></a>
+              <a routerLink="./editor" routerLinkActive="active"  class="btn navbar-btn">修改个人资料</a>
+              <a routerLink="./editicon" routerLinkActive="active" class="btn navbar-btn">修改头像</a>
+              <a routerLink="./editpwd" routerLinkActive="active" class="btn navbar-btn">修改密码</a>
+
+        </nav>
+        <div>
+          <router-outlet>
+          </router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

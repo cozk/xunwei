@@ -1,0 +1,39 @@
+<div class="col-md-12 col-lg-12">
+  <div class="row">
+    <div class="coll">
+      <br>
+      <form class="form-horizontal" #uploadForm="ngForm" id="upload_form">
+          <div class="form-group">
+            <label for="upload_file" class="col-sm-2 control-label">点击设置头像</label>
+            <div class="col-sm-8" style="height: 245px">
+              <input type="file" class="form-control"  id="upload_file" accept="image/*" name="user_icon">
+              <div id="preview" >
+                <img src="http://127.0.0.1:3000/uploads/personal/{{icon}}">
+              </div>
+            </div>
+            <div class="col-sm-4 col-sm-push-2">
+              <input type="button" (click)="toupload()" class="btn btn-success" style="background-color: grey; color: white;border: none"  value="确认" />
+            </div>
+          </div>
+        <br>
+      </form>
+    </div>
+  </div>
+</div>
+<!--<button data-toggle="modal" id="modal" class="btn btn-default hidden"></button>-->
+<!--<div id="myModal" class="modal">-->
+  <!--<div class="modal-dialog">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="media-heading">-->
+        <!--<h2>友情提醒</h2>-->
+      <!--</div>-->
+      <!--<div class="modal-body" id="modal_login_body">-->
+      <!--</div>-->
+      <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-default" data-dismiss="modal">确认</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+

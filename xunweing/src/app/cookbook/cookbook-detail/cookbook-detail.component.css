@@ -1,0 +1,646 @@
+ul{
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+a:hover{
+  text-decoration: none;
+}
+.cp_header {
+  /*width: 990px;*/
+  /*background: #00b38a;*/
+  /*background: #fff;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.clearfix {
+  zoom: 1;
+}
+/*头部图片*/
+.cp_headerimg_w {
+  width: 280px;
+  float: left;
+  overflow: hidden;
+  height: 362px;
+}
+.cp_headerimg_w img {
+  width: 280px;
+  display: block;
+  float: left;
+}
+/*头部右边*/
+.cp_main_info_w {
+  float: right;
+  width: 662px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+}
+/*第一栏信息*/
+.cp_main_info_w .info1 {
+  padding-left: 25px;
+  border-bottom: 1px solid #eee;
+  height: 100px;
+}
+.cp_main_info_w .info1 .title {
+  max-width: 288px;
+  height: 44px;
+  padding: 28px 0px;
+  line-height: 44px;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  margin-top: 0;
+}
+.favbtns {
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+.cp_main_info_w .favbtns .addToFav_con {
+  display: inline-block;
+  vertical-align: top;
+  background: #ff3232;
+  color: #fff;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  height: 48px;
+  padding: 0px 14px;
+  border: 1px solid #e90808;
+  border-radius: 2px;
+  line-height: 48px;
+}
+.cp_main_info_w .favbtns .addToFav_con:hover{
+  background: #e90808;
+}
+
+/*第二栏信息*/
+.cp_main_info_w .info2 {
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  width: 662px;
+  height: 170px;
+}
+.cp_main_info_w .info2 ul li a.big {
+  display: block;
+  font-size: 24px;
+  color: #ff3232;
+  /*font-family: Microsoft Yahei;*/
+  line-height: 30px;
+  width: 100px;
+  cursor: auto;
+  text-decoration: none;
+}
+.cp_main_info_w .info2 ul li .processing_w a.small {
+  display: block;
+  color: #666;
+  line-height: 24px;
+  float: left;
+  padding-top: 6px;
+  _display: inline;
+  text-decoration: none;
+  cursor: auto;
+}
+.cp_main_info_w .info2 ul {
+  display: block;
+  width: 662px;
+  height: 169px;
+}
+.cp_main_info_w .info2 ul li.w127 {
+  width: 104px;
+}
+.cp_main_info_w .info2 ul li.w270 {
+  width: 248px;
+}
+/*图标*/
+.cp_main_info_w .info2 ul li .processing_w span.icon_nd {
+  background-position: -3px -39px;
+}
+.cp_main_info_w .info2 ul li .processing_w span.icon_rs {
+  background-position: -3px -111px;
+}
+.cp_main_info_w .info2 ul li .processing_w span.icon_pr {
+  background-position: -3px -74px;
+}
+.cp_main_info_w .info2 ul li {
+  float: left;
+  /*height: 48px;*/
+  border-right: 1px solid #eee;
+  padding: 18px 0px 18px 20px;
+  border-bottom: 1px solid #eee;
+}
+.cp_main_info_w .info2 ul li strong {
+  font-size: 12px;
+  color: #999;
+  line-height: 18px;
+  display: block;
+  height: 18px;
+}
+.cp_main_info_w .info2 ul li .processing_w {
+  height: 30px;
+  font-size: 12px;
+  color: #666;
+}
+.cp_main_info_w .info2 ul li .processing_w span.icon_nd {
+  background-position: -3px -39px;
+}
+.cp_main_info_w .info2 ul li .processing_w span.icon {
+  display: block;
+  height: 30px;
+  width: 30px;
+  float: left;
+  background: url(../../../assets/images/cook_detail/icon01.gif) no-repeat;
+  float: left;
+}
+.cp_main_info_w .info2 ul li .processing_w span.processing_nd4 {
+  background-position: 0px -80px;
+}
+.cp_main_info_w .info2 ul li .processing_w span.processing {
+  height: 20px;
+  width: 140px;
+  background: url(../../../assets/images/cook_detail/progressing.gif) no-repeat;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  top: 7px;
+  margin-left: 5px;
+  float: left;
+  _display: inline;
+}
+.cp_main_info_w .info2 ul li.br0 {
+  border-right: 0px;
+}
+.cp_main_info_w .info2 ul li.bb0 {
+  border-bottom: 0px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*第三栏信息*/
+
+.cp_main_info_w .info3 .user {
+  height:90px;
+  padding: 10px 0 0 20px;
+  /*overflow: hidden;*/
+}
+.cp_main_info_w .info3 .user a.img {
+  display: block;
+  height: 70px;
+  width: 70px;
+  float: left;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.cp_main_info_w .info3 .user a.img img {
+  display: block;
+  height: 70px;
+  width: 70px;
+}
+.cp_main_info_w .info3 .user a.img span {
+  display: block;
+  height: 70px;
+  width: 70px;
+  /*background: url(../images/masker_70.png) 0px 0px no-repeat;*/
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.cp_main_info_w .info3 .user .info {
+  float: left;
+  /*padding-left: 10px;*/
+  height: 70px;
+}
+.cp_main_info_w .info3 .user h4 {
+  height: 22px;
+  line-height: 22px;
+  font-size: 20px;
+  color: #ff3232;
+  position: relative;
+  margin-bottom: 20px;
+}
+.cp_main_info_w .info3 .user h4 a {
+  color: #ff3232;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0px;
+  height: 22px;
+}
+.cp_main_info_w .info3 .user span {
+  line-height: 24px;
+  display: block;
+  color: #666;
+  padding-top: 4px;
+}
+.cp_main_info_w .info3 .user strong {
+  font-weight: normal;
+  line-height: 22px;
+  color: #999;
+}
+
+/*菜谱步骤主体*/
+/*材料*/
+.cp_body_left .materials {
+  background: #fff;
+  margin-bottom: 20px;
+}
+.cp_body_left .materials p {
+  line-height: 24px;
+  font-size: 14px;
+  padding: 20px 24px 10px;
+  color: #666;
+}
+.cp_body_left .materials p strong {
+  font-size: 24px;
+  color: #ddd;
+  font-family: arial;
+  font-weight: bold;
+  padding: 0px 3px;
+}
+.cpc_h2 {
+  font-size: 24px;
+  color: #333;
+  height: 66px;
+  line-height: 66px;
+  border-bottom: 1px solid #eee;
+  text-indent: 24px;
+  font-family: Microsoft Yahei;
+  display: block;
+}
+.cp_body_left .materials_box div.yl {
+  border-bottom: 1px solid #eee;
+}
+.cp_body_left .materials_box div.zl h3 {
+  width: 48px;
+  height: 22px;
+  color: #fff;
+  background: #ff3232;
+  border: 1px solid #e90808;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 14px 5px 14px 25px;
+  float: left;
+  _display: inline;
+}
+.cp_body_left .materials_box div.zl h3 a {
+  color: #fff;
+  cursor: default;
+}
+.cp_body_left .materials_box div.zl ul {
+  float: left;
+  width: 590px;
+}
+.cp_body_left .materials_box div.zl ul li {
+  float: left;
+  width: 294px;
+  border-right: 1px solid #eee;
+  height: 78px;
+  border-bottom: 1px solid #eee;
+}
+.cp_body_left .materials_box div.zl ul li div.c {
+  float: left;
+  width: 214px;
+  height: 50px;
+  margin-left: 5px;
+  padding: 20px 0px 14px 10px;
+  box-sizing: border-box;
+}
+.cp_body_left .materials_box div.zl ul li div.c h4 {
+  line-height: 24px;
+  font-size: 14px;
+  color: #333;
+  height: 24px;
+  margin-bottom: 5px;
+  float: left;
+  width: 204px;
+  overflow: hidden;
+}
+.cp_body_left .materials_box div.zl ul li a.img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding: 14px 0px 14px 14px;
+}
+.cp_body_left .materials_box div.zl ul li div.c a.fortb {
+  height: 26px;
+  width: 204px;
+  display: block;
+  float: left;
+  background: url(../../../assets/images/cook_detail/cheche01.png) left top no-repeat;
+}
+.cp_body_left .materials_box div.zl ul li a.img img {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+/*辅料*/
+.cp_body_left .materials_box div.yl {
+  border-bottom: 1px solid #eee;
+}
+.cp_body_left .materials_box div.fuliao h3 {
+  width: 48px;
+  height: 22px;
+  font-size: 14px;
+  color:white;
+  background: #ff3232;
+  /*border: 1px solid #ddd;*/
+  text-align: center;
+  line-height: 24px;
+  margin: 14px 5px 14px 25px;
+  float: left;
+  _display: inline;
+}
+.cp_body_left .materials_box div.fuliao h3 a {
+  color: white;
+  cursor: auto;
+}
+.cp_body_left .materials_box div.fuliao ul {
+  float: left;
+  width: 590px;
+}
+.cp_body_left .materials_box div.fuliao ul li {
+  float: left;
+  width: 294px;
+  border-right: 1px solid #eee;
+  height: 54px;
+  border-bottom: 1px solid #eee;
+}
+.cp_body_left .materials_box div.fuliao ul li h4 {
+  text-indent: 14px;
+  color: #666;
+  float: left;
+  font-size: 14px;
+  line-height: 54px;
+  height: 54px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.cp_body_left .materials_box div.fuliao ul li h4 a {
+  color: #333;
+  cursor: auto;
+}
+.cp_body_left .materials_box div.fuliao ul li span {
+  display: block;
+  height: 54px;
+  line-height: 54px;
+  color: #999;
+  text-align: right;
+  padding-right: 16px;
+  float: right;
+  width: 120px;
+}
+.cp_body_left .materials_box div.fuliao ul li a.fortb {
+  height: 26px;
+  width: 26px;
+  float: left;
+  margin: 14px 10px;
+  background: url(../../../assets/images/cook_detail/cheche01.png) no-repeat;
+  _display: inline;
+}
+/*做法*/
+/*标题*/
+.cpc_h2 {
+  font-size: 24px;
+  color: #333;
+  height: 66px;
+  line-height: 66px;
+  border-bottom: 1px solid #eee;
+  text-indent: 24px;
+  font-family: Microsoft Yahei;
+  display: block;
+}
+em.step {
+  font-size: 50px;
+  color: #ff3232;
+  font-style: italic;
+  text-align: center;
+  font-family: arial;
+  height: 50px;
+  width: 100px;
+  display: Block;
+  float: left;
+  line-height: 50px;
+}
+.cp_body_left .measure .editnew div.content {
+  line-height: 24px;
+  padding: 0px 20px 0px 0px;
+  position: relative;
+}
+.cp_body_left .measure .editnew div.content div.c {
+  float: left;
+  width: 550px;
+  overflow: hidden;
+}
+.cp_body_left .measure .editnew p {
+  line-height: 24px;
+  color: #666;
+  padding: 10px 20px 10px 0px;
+  position: relative;
+  font-size: 14px;
+}
+.cp_body_left .measure .editnew p img.conimg {
+  max-width: 550px;
+}
+
+/*评论区*/
+.cp_comments_list {
+
+  padding: 20px 0;
+}
+.cp_com_form_w a.useravatar {
+  float: left;
+  height: 50px;
+  width: 50px;
+  float: left;
+  display: block;
+}
+.cp_com_form_w a.useravatar img {
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+.cp_com_form_w .form_w {
+  display: block;
+  height: 180px;
+  width: 560px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.cp_com_form_w .cp_pl_tag {
+  height: 24px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.cp_com_form_w .cp_pl_tag em {
+  line-height: 24px;
+  color: #666;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: top;
+  height: 24px;
+}
+.cp_com_form_w .cp_pl_tag span.current {
+  background: #ff3232;
+  color: #fff;
+}
+.cp_com_form_w .cp_pl_tag span {
+  cursor: pointer;
+  line-height: 24px;
+  color: #999;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: top;
+  height: 24px;
+  padding: 0px 10px;
+  background: #eee;
+  margin-right: 10px;
+}
+.cp_com_form_w .form_w textarea {
+  height: 70px;
+  width: 530px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+  color: #333;
+  font-size: 14px;
+}
+.cp_com_form_w .form_w input.submit {
+  box-sizing: content-box;
+  height: 40px;
+  width: 80px;
+  background: #ff3232;
+  border: 1px solid #e90808;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.cp_com_form_w .upload_zp_btn {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 140px;
+  background: #ff3232;
+  border: 1px solid #e90808;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+/*评论排序*/
+.cp_comlist_tab {
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  margin: 0px 20px 0px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #666;
+}
+.cp_comlist_tab strong {
+  display: inline-block;
+  vertical-align: top;
+  width: 70px;
+}
+.cp_comlist_tab span.current {
+  cursor: default;
+  background: #ff3232;
+  color: #fff;
+}
+.cp_comlist_tab span {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px 10px;
+  background: #eee;
+  margin-right: 10px;
+  color: #999;
+  cursor: pointer;
+}
+/*最新评论*/
+.cp_comlist_w {
+  width: 680px;
+  padding: 20px 20px 0px;
+}
+.commentslist_li {
+  padding: 20px 0px 0px;
+  border-bottom: 1px solid #eee;
+}
+.cp_comlist_w ul li a.avatar img {
+  display: Block;
+  height: 50px;
+  width: 50px;
+}
+.cp_comlist_w ul li a.avatar {
+  height: 82px;
+  width: 50px;
+  float: left;
+}
+.cp_comlist_w ul li div.c {
+  float: left;
+  margin-left: 20px;
+  width: 560px;
+}
+.cp_comlist_w ul li div.c p.p1 {
+  font-size: 14px;
+  color: #666;
+  line-height: 24px;
+}
+.cp_comlist_w ul li div.info {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  color: #999;
+}
+.cp_comlist_w ul li div.info a.re {
+  color: #999;
+  float: right;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+.cp_comlist_w ul li div.info .zzzzan {
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px 10px;
+  color: #999;
+  cursor: pointer;
+}
+.cp_comlist_w ul li div.info .zzzzan .con_comlist_zanbtn {
+  background: url(../../../assets/images/cook_detail/zan.png) 0px 0px no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  width: 16px;
+  margin: 12px 0px 0px 0px;
+  padding: 0px;
+}
+.cp_comlist_w ul li div.c .comscoms {
+  width: 520px;
+  padding: 10px 20px 0px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+}
+.re_form {
+  float: right;
+  width: 520px;
+  height: 150px;
+  position: relative;
+  top: -10px;
+  display: none;
+}

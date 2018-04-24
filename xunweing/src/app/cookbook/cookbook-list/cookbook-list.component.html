@@ -1,0 +1,72 @@
+<div class="header">
+  <div class="bg_nav">
+    <img src="../../../assets/images/cookbook/bg01.jpg" alt="">
+  </div>
+  <div class="container  search_nav col-md-8">
+
+    <form  #searchForm="ngForm" >
+      <div class="form-group col-md-6">
+        <input type="text" value="{{_stext}}" [(ngModel)]="text" name="search" placeholder="请输入" class="form-control input-lg" required >
+      </div>
+      <button type="button"  class="btn btn-success search_btn btn-lg col-md-2" (click)="search(text)">搜索</button>
+    </form>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row col-lg-offset-1">
+    <div class="space_left col-md-8 " >
+      <div class="arinfo clear">
+        <div class="ui_title mt10">
+          <div class="ui_title_wrap">
+            <h2 class="on">{{_stext}}</h2>
+            <!--<span style="color:#999;font-size:14px">约{{_count}}条结果</span>-->
+            <a (click)="hot()" class="right" [ngClass]="{'out':!_existhot,'on':_existhot}">人气</a>
+            <a (click)="newCook()" class="right" [ngClass]="{'out':!_existnew,'on':_existnew}">最新</a>
+          </div>
+        </div>
+      </div>
+      <div class="row ui_list_1">
+        <ul>
+          <li  *ngFor="let cook of _cooks|searchCooks:_stext |orderBy:_hot|paginate: { itemsPerPage: 12, currentPage: p }; let i=index">
+            <div class="pic">
+              <a  (click)="toCookdetail(cook?.ckname)" target="_blank">
+                <img class="imgLoad" src="../../../assets/images/cookbook/{{cook?.ckimg}}" width="120" height="90" style="display: block;">
+              </a>
+            </div>
+            <div class="detail">
+              <h4>{{cook?.ckname}}</h4>
+              <div class="substatus clear">
+                <div class="left">
+                  <a  target="_blank">{{cook?.ckauthor}}</a>
+                </div>
+                <div class="right"></div>
+              </div>
+              <p class="subcontent">原料：<em>{{cook?.zhuliaoa}}</em>、{{cook?.zhuliaob}}、{{cook?.zhuliaoc}}、{{cook?.fuliaoa}}、{{cook?.fuliaob}}。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event"></pagination-controls>
+
+    </div>
+    <div class="col-md-3">
+      <div class="space_right"  [ngClass]="{'.space_rightB':_height}" >
+        <div class="mo mt10">
+          <h2>大家都在搜</h2>
+        </div>
+        <ul class="s_right">
+          <li  *ngFor="let item of hotSearch;let i=index">
+            <a class="hvr-bounce-in" (click)="search(item.hs)">{{item.hs}}
+              <i><img src="../../../assets/images/cookbook/hot.png" alt=""></i>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+

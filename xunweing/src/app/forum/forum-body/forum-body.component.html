@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-push-1" style="margin-left: -15px;">
+
+
+      <div class="left">
+
+        <div class="pic">
+          <ul>
+            <li class="pic1"> <a (click)="forumdetail('敢不敢吃了这个重口味『变态茎』')">
+              <div class="text">
+                <span class="p1">不变态怎能成就美味</span>
+                <span class="p2">美味地下变态茎大盘点</span>
+              </div>
+            </a> </li>
+            <li class="pic2"> <a (click)="forumdetail('教你如何用一块饼干敲开烘焙的大门')">
+              <div class="text">
+                <span class="p1">烘焙的大门说开就开</span>
+                <span class="p2">烘焙好书免费送送送啦</span>
+              </div>
+            </a> </li>
+            <li class="pic3"> <a (click)="forumdetail('让面包机做出好面包')">
+              <div class="text">
+                <span class="p1">用好配方口感大不同</span>
+                <span class="p2">爱让面包机做出好面包</span>
+              </div>
+            </a> </li>
+          </ul>
+        </div>
+        <br><br>
+
+
+        <div class="post">
+          <div id="topic">
+            <p class="tuijian">|&nbsp;&nbsp;推荐话题</p>
+          </div>
+          <ul>
+
+            <li class="card"  *ngFor="let fs of _forumbody | queren0|paginate: { itemsPerPage: 5, currentPage: p }">
+              <div class="look">
+                <span class="lookspan">
+                  <p>{{fs?.liulan}}</p>
+                  <p>浏览</p>
+                </span>
+              </div>
+              <div class="detail">
+                <p class="detailp1" (click)="forumdetail(fs.title)">{{fs?.title}}</p>
+                <p class="detailp2">{{fs?.detail |jiequ}}</p>
+                <p class="detailp3">发帖人：{{fs?.userid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发帖时间：{{fs?.posttime}}</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <pagination-controls previousLabel="上一页" nextLabel="下一页" (pageChange)="p = $event" ></pagination-controls>
+
+
+
+
+      </div>
+
+
+      <div class="right" style="margin-right: -25px;">
+        <div style="background-image: url(./../../../assets/images/right1.png);width: 245px;height: 405px;"></div>
+        <div class="publish"><a  (click)="tofabu()">发布菜谱</a></div><br>
+        <p style="color:orangered;font-size: 18px;margin-left: 18px;">官方活动</p>
+        <ul>
+
+          <li class="authority" *ngFor="let fs of _forumbody|queren1">
+            <div class="gfimg"></div>
+            <div class="gfwords" (click)="forumdetail(fs.title)">
+              <a>{{fs?.title |gfjiequ}}</a>
+              <br>
+              <span style="display: inline-block;font-size: 8px;">{{fs?.posttime}}</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <div style="background-image: url(./../../../assets/images/right2.jpg);width: 245px;height: 156px; float: left;"></div>
+      </div>
+    </div>
+  </div>
+</div>
